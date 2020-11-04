@@ -1,0 +1,13 @@
+V1.0.003
+
+- 增加了记录仪中的Recorder Mode下的Automatic = Disable，防止数据不能存储
+- 增加了记录仪中的Recorder Mode下的Record = On PC，直接记录在计算机硬盘上
+- 增加了2个附加转速的读取，和写入
+
+V1.0.004
+
+-把Stop Recorder后面的触发信号关闭，以及保存项目移到Arm函数下面，避免数据不能正确存储。
+-在Start monitoring中也增加触发信号关闭
+
+V1.0.005
+-增加保存数据的20s延迟，避免保存过程中发送数据给NVGate造成数据丢失
