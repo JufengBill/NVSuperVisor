@@ -1386,15 +1386,7 @@ void CNVSuperVisorDlg::OnBnClickedOperateremotenvgate()
 	CWrkList workbookList;
 	CString selectWrkName;
 
-	//m_cursorType = 1;
-	m_btnSendWKFiles.EnableWindow(FALSE);
-	m_btnLoadWK.EnableWindow(FALSE);
-	m_btnOpenRemoteNVGate.EnableWindow(FALSE);
-	m_btnArm.EnableWindow(FALSE);
-	m_btnStartMonitor.EnableWindow(FALSE);
-	m_btnStartRecord.EnableWindow(FALSE);
-	m_btnStopandSave.EnableWindow(FALSE);
-	m_btnRunAutoZero.EnableWindow(FALSE);
+
 
 	for (int i = 0; i < numofSystem; i++)
 	{
@@ -1452,6 +1444,16 @@ void CNVSuperVisorDlg::OnBnClickedOperateremotenvgate()
 		m_iFinishCount_LoadWorkbook = 0;
 		m_iSuccessCount_LoadWorkbook = 0;
 
+		//m_cursorType = 1;
+		m_btnSendWKFiles.EnableWindow(FALSE);
+		m_btnLoadWK.EnableWindow(FALSE);
+		m_btnOpenRemoteNVGate.EnableWindow(FALSE);
+		m_btnArm.EnableWindow(FALSE);
+		m_btnStartMonitor.EnableWindow(FALSE);
+		m_btnStartRecord.EnableWindow(FALSE);
+		m_btnStopandSave.EnableWindow(FALSE);
+		m_btnRunAutoZero.EnableWindow(FALSE);
+
 		for (int i = 0; i < numofSystem; i++)
 		{
 			if (!m_pTcpClient_LoadWorkbook[i]->OperateRemoteNVGate(ipAddress, i, *workbookList.m_nSelText, AfxGetMainWnd()->m_hWnd))
@@ -1462,6 +1464,10 @@ void CNVSuperVisorDlg::OnBnClickedOperateremotenvgate()
 			}
 
 		}
+	}
+	else
+	{
+		OnSetFinishCount(this, 3, 0);
 	}
 
 }
@@ -1758,6 +1764,7 @@ void CNVSuperVisorDlg::OnBnClickedStoprecord()
 	if (!UpdateData())
 		return;
 
+	
 	m_iFinishCount_Stopped = 0;
 	//m_cursorType = 1;
 
@@ -1770,17 +1777,27 @@ void CNVSuperVisorDlg::OnBnClickedStoprecord()
 	m_btnRunAutoZero.EnableWindow(FALSE);
 
 
-
 	for (int i = 0; i < numofSystem; i++)
 	{
-		/*if (m_pAnalyzerStatus[i] != _T("Stopped"))
-		{*/
+		if (m_pAnalyzerStatus[i] != _T("Unknown"))
+		{
+			
 			if (!m_pTcpClient_Save[i]->StopRecord(ipAddress, i, AfxGetMainWnd()->m_hWnd))
 			{
 				OnSetFinishCount(this, 4, 0);
 				str_Temp.Format(_T("Stop and saving measurement in System #%d failed, please check!"), i + 1);
 				MessageBox(str_Temp, _T("NVSuperVisor"), MB_OK | MB_ICONERROR);
 			}
+		}
+		else
+		{
+			OnSetFinishCount(this, 4, 0);
+		}
+		
+		
+		/*if (m_pAnalyzerStatus[i] != _T("Stopped"))
+		{*/
+			
 				
 		//}
 		//else
@@ -1795,11 +1812,12 @@ void CNVSuperVisorDlg::OnBnClickedOk()
 {
 	// TODO:  在此添加消息处理程序代码和/或调用默认值
 	//m_cursorType = 1;
+	
 	int nRes = MessageBox(_T("Do you want to quit the program?"), _T("NVSuperVisor"), MB_YESNO | MB_ICONQUESTION);
 	switch (nRes)
 	{
 	case 6:
-		
+			
 		for (int i = 0; i < numofSystem; i++)
 		{
 			if (m_pTcpClient_States[i]->m_pGetAnalyzerStatus != NULL)
@@ -1808,7 +1826,7 @@ void CNVSuperVisorDlg::OnBnClickedOk()
 				Sleep(1);
 			}
 		}
-		
+
 		for (int i = 0; i < numofSystem; i++)
 		{
 			if (m_pTcpClient_OpenNVGate[i]->m_pOpenRemoteNVGate != NULL)
@@ -1825,18 +1843,13 @@ void CNVSuperVisorDlg::OnBnClickedOk()
 		case 6:
 			for (int i = 0; i < numofSystem; i++)
 			{
-				m_pTcpClient_Save[i]->StopRecord(ipAddress, i, AfxGetMainWnd()->m_hWnd);
-				Sleep(1);
-			}
-
-			/*for (int i = 0; i < numofSystem; i++)
-			{
-				if (m_pTcpClient_States[i]->m_pGetAnalyzerStatus != NULL)
+				if (m_pAnalyzerStatus[i] != _T("Unknown"))
 				{
-					m_pTcpClient_States[i]->SetGettingStateFlag();
+					m_pTcpClient_Save[i]->StopRecord(ipAddress, i, AfxGetMainWnd()->m_hWnd);
 					Sleep(1);
 				}
-			}*/
+				
+			}
 
 			nRes = MessageBox(_T("Do you want to close the remote NVGate?"), _T("NVSuperVisor"), MB_YESNO | MB_ICONQUESTION);
 			switch (nRes)
@@ -1858,21 +1871,15 @@ void CNVSuperVisorDlg::OnBnClickedOk()
 			m_cursorType = 0;
 			break;
 		case 7:
-			/*for (int i = 0; i < numofSystem; i++)
-			{
-				if (m_pTcpClient_States[i]->m_pGetAnalyzerStatus != NULL)
-				{
-					m_pTcpClient_States[i]->SetGettingStateFlag();
-					Sleep(1);
-				}
-			}*/
+
+			break;
 		default:
+
 			break;
 		}
 
-		
-
 		CDialogEx::OnOK();
+		
 		break;
 	default:
 		break;
@@ -1977,6 +1984,7 @@ void CNVSuperVisorDlg::OnClose()
 	switch (nRes)
 	{
 	case 6:
+		
 		for (int i = 0; i < numofSystem; i++)
 		{
 			m_pTcpClient_States[i]->SetGettingStateFlag();
@@ -2031,6 +2039,7 @@ void CNVSuperVisorDlg::OnClose()
 		
 
 		CDialogEx::OnClose();
+
 		break;
 	default:
 		break;

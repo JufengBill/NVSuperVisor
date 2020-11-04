@@ -1,54 +1,7 @@
-﻿生成启动时间为 2020/11/4 11:42:17。
+﻿生成启动时间为 2020/11/4 16:00:42。
      1>项目“C:\Users\zhengyun\Documents\Visual Studio 2013\Projects\NVSuperVisor-master\NVSuperVisor\NVSuperVisor.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\NVSuperVisor.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt NVSuperVisorDlg.cpp TcpClient.cpp
-         TcpClient.cpp
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(36): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : 参见“strcpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(89): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : 参见“strcpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(268): warning C4101: “nValue”: 未引用的局部变量
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(1125): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : 参见“sprintf”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(1126): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(1433): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : 参见“sprintf”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(1548): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : 参见“strcpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2315): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : 参见“strcpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2345): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2353): warning C4244: “=”: 从“UWORD”转换到“int”，可能丢失数据
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2431): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : 参见“sprintf”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2432): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2433): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2435): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2413): warning C4101: “nFolderNameLen”: 未引用的局部变量
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2445): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2454): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2599): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2633): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2656): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(2667): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(5639): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(5642): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(5617): warning C4101: “nFolderNameLen”: 未引用的局部变量
-     1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\tcpclient.cpp(7830): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\NVSuperVisor.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt NVSuperVisorDlg.cpp
          NVSuperVisorDlg.cpp
      1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\resource.h(36): warning C4005: “IDCANCEL”: 宏重定义
                  c:\program files (x86)\windows kits\8.1\include\um\winuser.h(10563) : 参见“IDCANCEL”的前一个定义
@@ -74,7 +27,6 @@
      1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\nvsupervisordlg.cpp(835): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : 参见“strncpy”的声明
      1>c:\users\zhengyun\documents\visual studio 2013\projects\nvsupervisor-master\nvsupervisor\nvsupervisordlg.cpp(956): warning C4101: “m_nWorkbookNumber”: 未引用的局部变量
-         正在生成代码...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zhengyun\Documents\Visual Studio 2013\Projects\NVSuperVisor-master\Debug\NVSuperVisor.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\zhengyun\Documents\Visual Studio 2013\Projects\NVSuperVisor-master\Debug\NVSuperVisor.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zhengyun\Documents\Visual Studio 2013\Projects\NVSuperVisor-master\Debug\NVSuperVisor.lib" /MACHINE:X86 Debug\NVSuperVisor.res
          Debug\CommonFunction.obj
@@ -94,4 +46,4 @@
 
 生成成功。
 
-已用时间 00:00:01.52
+已用时间 00:00:01.04
